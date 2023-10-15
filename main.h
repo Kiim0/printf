@@ -1,6 +1,6 @@
 #ifndef MAIN_H
 #define MAIN_H
-#include <stdrag.h>
+#include <stdarg.h>
 #include <stdio.h>
 #include <unistd.h>
 
