@@ -194,7 +194,7 @@ int flags, int width, int precision, int size)
  * Return: Number of written chars.
  */
 int write_pointer(char buffer[], int ind, int length,
-int width, int flags, char padd, char extra_c, int padd_start)
+	int width, int flags, char padd, char extra_c, int padd_start)
 {
 	int i;
 
@@ -219,8 +219,7 @@ int width, int flags, char padd, char extra_c, int padd_start)
 	buffer[--ind] = extra_c;
 	return (write(1, &buffer[3], i - 3) + write(1, &buffer[ind], length));
 	}
-	else if
-	(!(flags & F_MINUS) && padd == '0')/* extra char to left of padd */
+	else if (!(flags & F_MINUS) && padd == '0')/* extra char to left of padd */
 	{
 	if (extra_c)
 	buffer[--padd_start] = extra_c;
