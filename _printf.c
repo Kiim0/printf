@@ -44,7 +44,7 @@ int _printf(const char *format, ...)
 			printed_chars += printed;
 		}
 	}
-	print_buffe r(buffer, &buff_ind);
+	print_buffer(buffer, &buff_ind);
 
 	va_end(list);
 
